@@ -1,6 +1,6 @@
 <html>
 <head>
-  <link rel="manifest" href="/manifest.json" />
+  <link rel="manifest" href="manifest.json" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Digital Books — Читай везде</title>
@@ -62,7 +62,7 @@
   <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/serviceworker.js')
+      navigator.serviceWorker.register('serviceworker.js')
         .then(registration => console.log('SW registered:', registration))
         .catch(error => console.log('SW registration failed:', error));
     });
