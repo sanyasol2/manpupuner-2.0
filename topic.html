@@ -1,0 +1,41 @@
+<html>
+<head>
+  <link rel="manifest" href="/manifest.json" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>О проекте Digital Books</title>
+  <style>
+    :root { --primary: #4f46e5; --bg: #f8fafc; --card-bg: #ffffff; --text: #1e293b; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; padding: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
+    header { background: var(--primary); color: white; padding: 20px; text-align: center; }
+    nav a { color: rgba(255,255,255,0.9); margin: 0 12px; text-decoration: none; }
+    main { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    .feature-list li { margin-bottom: 12px; }
+    footer { background: #1e1b24; color: #94a3b8; text-align: center; padding: 20px; margin-top: 48px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Digital Books</h1>
+    <nav>
+      <a href="index.html">Каталог</a>
+      <a href="about.html">О проекте</a>
+    </nav>
+  </header>
+  <main>
+    <h2>О проекте</h2>
+    <p>Digital Books — это библиотека цифровых книг, созданная как PWA-приложение для удобного чтения в любом месте, даже без подключения к интернету.</p>
+    <h3>Основные возможности:</h3>
+    <ul class="feature-list">
+      <li>Офлайн-доступ к книгам благодаря Service Worker.</li>
+      <li>Адаптивный дизайн для мобильных и десктопов.</li>
+      <li>Простой каталог с фильтрами (в разработке).</li>
+    </ul>
+    <p>Проект находится в стадии MVP. Мы планируем добавить поиск, личный кабинет и загрузку книг пользователями.</p>
+  </main>
+  <footer>
+    &copy; 2026 Digital Books. MVP версия.
+  </footer>
+</body>
+</html>
+

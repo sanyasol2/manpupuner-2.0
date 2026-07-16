@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>О проекте — Digital Books</title>
+  <!-- Подключаем внешний CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Подключаем манифест -->
+  <link rel="manifest" href="/manifest.json" />
+</head>
+<body>
+  <header>
+    <h1>Digital Books</h1>
+    <nav>
+      <a href="index.html">Каталог</a>
+      <a href="about.html">О проекте</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>Что такое Digital Books?</h2>
+      <p>
+        Digital Books — это библиотека цифровых книг, спроектированная как Progressive Web App (PWA). 
+        Главная цель проекта — дать возможность читать любимые книги даже без доступа к интернету.
+      </p>
+      <p>
+        Это MVP-версия: функционал минимален, но уже покрывает ключевые сценарии: 
+        просмотр каталога, чтение в офлайн-режиме, установка приложения на телефон.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Возможности в текущей версии</h2>
+      <ul class="feature-list">
+        <li>Адаптивный дизайн: одинаково удобно на телефоне и компьютере.</li>
+        <li>Офлайн-доступ: страницы кэшируются через Service Worker.</li>
+        <li>Установка на устройство: можно добавить на домашний экран как приложение.</li>
+        <li>Простой каталог с карточками книг и базовой информацией.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Технологии и стек</h2>
+      <p>Проект реализован на чистом стеке без сторонних фреймворков:</p>
+      <div class="tech-stack">
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS3</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Service Worker</span>
+        <span class="tag">Manifest</span>
+        <span class="tag">PWA</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Планы по развитию</h2>
+      <ul class="feature-list">
+        <li>Добавить страницу «Читать» с имитацией чтения книги.</li>
+        <li>Реализовать поиск и фильтрацию по жанрам и авторам.</li>
+        <li>Ввести личный кабинет и список «Избранное».</li>
+        <li>Подключить API для получения реальных данных о книгах.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Digital Books. MVP версия. Проект создан для демонстрации PWA-возможностей.
+  </footer>
+
+  <!-- Регистрация Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/serviceworker.js')
+          .then(reg => console.log('SW registered:', reg))
+          .catch(err => console.error('SW registration failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>
